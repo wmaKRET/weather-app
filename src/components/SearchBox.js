@@ -3,7 +3,7 @@ import { AsyncPaginate } from "react-select-async-paginate"
 
 import { GEO_API_URL, geoApiOptions } from "../api"
 
-const SearchBox = () => {
+const SearchBox = ({ onSearchChange }) => {
     const [searchValue, setSearchValue] = useState(null)
 
     const loadOptions = (inputValue) => {
@@ -17,22 +17,21 @@ const SearchBox = () => {
                     options: response.data.map(city => {
                         return {
                             label: `${city.name}, ${city.countryCode}`,
-                            latitude: city.latitude,
-                            longitude: city.longitude
+                            value: `${city.latitude} ${city.longitude}`
                         }
                     })
                 }
             })
             .catch(err => console.error(err))
     }
-    
+
     const handleChange = (searchData) => {
         setSearchValue(searchData)
+        onSearchChange(searchData)
     }
 
     return (
         <AsyncPaginate
-            className="searchbox"
             placeholder="Search for city..."
             debounceTimeout={600}
             value={searchValue}
