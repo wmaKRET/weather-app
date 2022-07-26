@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+}
+
+h1 {
+    color: #fff;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    cursor: default;
+}
+
+.container {
+    margin: 6em auto;
+}
+
+@media screen and (min-width: 901px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 80%;
+    }
+}
