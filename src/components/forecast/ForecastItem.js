@@ -1,4 +1,4 @@
-const ForecastItem = ({ data }) => {
+const ForecastItem = ({ data, dayOfTheWeek }) => {
     const weather = data.weather[0]
     const temp = data.main.temp
     return (
@@ -9,7 +9,7 @@ const ForecastItem = ({ data }) => {
                     src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`}
                     alt={weather.description}
                 />
-                <p className="forecast-item__day">Monday</p>
+                <p className="forecast-item__day">{dayOfTheWeek}</p>
             </div>
             <p className="forecast-item__description">{weather.description}</p>
             <p className="forecast-item__temp">{`${Math.round(temp)}°C`}</p>
