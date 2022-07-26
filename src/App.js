@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./api"
 import SearchBox from "./components/SearchBox"
-import CurrentWeather from "./components/CurrentWeather"
+import CurrentWeather from "./components/current-weather/CurrentWeather"
 
 import './scss/app.scss'
 
