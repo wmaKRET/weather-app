@@ -11,7 +11,7 @@ const ForecastItem = ({ data, dayOfTheWeek }) => {
                 />
                 <p className="forecast-item__day">{dayOfTheWeek}</p>
             </div>
-            <p className="forecast-item__description">{weather.description}</p>
+            <p className="forecast-item__description">{`(${weather.description})`}</p>
             <p className="forecast-item__temp">{`${Math.round(temp)}°C`}</p>
         </div>
     )

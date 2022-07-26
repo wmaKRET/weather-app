@@ -8,7 +8,7 @@
     border-radius: 5px;
     box-shadow: 5px 5px 10px 10px black;
 
-    & > div {
+    &>div {
         display: flex;
         align-items: center;
     }
@@ -25,9 +25,26 @@
 
     &__description {
         color: #e4e4e4;
+        flex: 1 1;
     }
 
     &__temp {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .forecast-item {
+        &__day {
+            font-size: 1rem;
+        }
+
+        &__description {
+            display: none;
+        }
+
+        &__temp {
+            font-size: 1.5rem;
+        }
     }
 }
