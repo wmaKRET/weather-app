@@ -1,7 +1,9 @@
 import { useState } from "react"
-import SearchBox from "./components/SearchBox"
 
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./api"
+import SearchBox from "./components/SearchBox"
+import CurrentWeather from "./components/CurrentWeather"
+
 import './scss/app.scss'
 
 const App = () => {
@@ -22,12 +24,11 @@ const App = () => {
       .catch(err => console.error(err))
   }
 
-  console.log(weather)
-
   return (
     <div className="container">
       <h1>Weather App</h1>
       <SearchBox onSearchChange={handleChange} />
+      {weather && <CurrentWeather data={weather}/>}
     </div>
   )
 }
