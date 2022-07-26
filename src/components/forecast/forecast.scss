@@ -1,0 +1,33 @@
+.forecast-item {
+    padding: 0 1em 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #313131;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 10px black;
+
+    & > div {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        scale: 0.8;
+    }
+
+    &__day {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+    }
+
+    &__description {
+        color: #e4e4e4;
+    }
+
+    &__temp {
+        font-size: 2rem;
+    }
+}
