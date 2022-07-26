@@ -1,10 +1,13 @@
+import SearchBox from "./components/SearchBox"
+
 import './scss/app.scss'
 
 const App = () => {
   return (
-    <>
-      <h1>hello world</h1>
-    </>
+    <div className="container">
+      <h1>Weather App</h1>
+      <SearchBox />
+    </div>
   )
 }
 
