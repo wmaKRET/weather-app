@@ -1,5 +1,4 @@
 .weather {
-    min-width: 340px;
     max-width: 440px;
     margin: 2em auto;
     padding-left: 0.5em;
@@ -63,6 +62,16 @@
                     color: #eeeeee;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .weather-bottom {
+        flex-direction: column;
+
+        &__temp {
+            align-self: center;
         }
     }
 }
